@@ -1,0 +1,1 @@
+insert into $databaseName (serpo,company,type,region,recoveryDate,periodeRecoveryDate,problem,months,year,recoveryTime) values ($serpo, $company, $type, $region, $recoveryDate, $periodeRecoveryDate, $problem, $months, $year, $recoveryTime)
