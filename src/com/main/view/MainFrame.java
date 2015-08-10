@@ -7,6 +7,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import com.main.view.screen.UploadDataPanel;
+
 public class MainFrame extends JFrame {
 
 	private static final long serialVersionUID = -7976781332998630339L;
@@ -40,6 +42,7 @@ public class MainFrame extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
+		add(new UploadDataPanel());
 	}
 
 }
