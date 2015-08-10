@@ -17,15 +17,15 @@ public class HomeScreen extends JPanel{
 		add(titleLbl);
 		
 		JButton uploadViewBtn = new JButton("Upload Data");
-		uploadViewBtn.setBounds(10, 450, 200, 50);
+		uploadViewBtn.setBounds(10, 450, 250, 50);
 		add(uploadViewBtn);
 		
 		JButton graphicViewBtn = new JButton("View Graphic");
-		graphicViewBtn.setBounds(220, 450, 200, 50);
+		graphicViewBtn.setBounds(270, 450, 250, 50);
 		add(graphicViewBtn);
 		
 		JButton rawDataViewBtn = new JButton("View Raw Data");
-		rawDataViewBtn.setBounds(430, 450, 200, 50);
+		rawDataViewBtn.setBounds(530, 450, 250, 50);
 		add(rawDataViewBtn);
 	}
 }
