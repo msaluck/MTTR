@@ -61,5 +61,11 @@ public class ViewGraphicPanel extends JPanel {
 		JComboBox comboBox = new JComboBox();
 		comboBox.setBounds(150, 190, 300, 30);
 		add(comboBox);
+		
+		JButton backBtn = new JButton("Back");
+		backBtn.setBounds(525, 270, 75, 30);
+		backBtn.setFont(new Font("segou ui", Font.PLAIN, 16));
+		backBtn.setVerticalAlignment(SwingConstants.CENTER);
+		add(backBtn);
 	}
 }

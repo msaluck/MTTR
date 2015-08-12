@@ -19,22 +19,21 @@ public class HomeScreen extends JPanel{
 		
 		JLabel titleLbl = new JLabel("MTTR MONITORING SERPO");
 		titleLbl.setBounds(10, 10, 250, 50);
-		titleLbl.setFont(new Font("Dialog", Font.PLAIN, 16));
+		titleLbl.setFont(new Font("segui ui", Font.PLAIN, 16));
 		titleLbl.setHorizontalAlignment(SwingConstants.CENTER);
 		add(titleLbl);
 		
 		JButton uploadViewBtn = new JButton("Upload Data");
 		uploadViewBtn.setBounds(10, 450, 250, 50);
-		uploadViewBtn.setFont(new Font("Dialog", Font.PLAIN, 16));
+		uploadViewBtn.setFont(new Font("segui ui", Font.PLAIN, 16));
 		add(uploadViewBtn);
 		
 		uploadViewBtn.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				UploadDataPanel uploadDataPanel = new UploadDataPanel();
 				removeAll();
-				add(uploadDataPanel);
+				add(new UploadDataPanel());
 				repaint();
 				revalidate();
 			}
@@ -42,7 +41,7 @@ public class HomeScreen extends JPanel{
 		
 		JButton graphicViewBtn = new JButton("View Graphic");
 		graphicViewBtn.setBounds(270, 450, 250, 50);
-		graphicViewBtn.setFont(new Font("Dialog", Font.PLAIN, 16));
+		graphicViewBtn.setFont(new Font("segui ui", Font.PLAIN, 16));
 		add(graphicViewBtn);
 		
 		graphicViewBtn.addActionListener(new ActionListener() {
@@ -59,7 +58,7 @@ public class HomeScreen extends JPanel{
 		
 		JButton rawDataViewBtn = new JButton("View Raw Data");
 		rawDataViewBtn.setBounds(530, 450, 250, 50);
-		rawDataViewBtn.setFont(new Font("Dialog", Font.PLAIN, 16));
+		rawDataViewBtn.setFont(new Font("segui ui", Font.PLAIN, 16));
 		add(rawDataViewBtn);
 		
 		rawDataViewBtn.addActionListener(new ActionListener() {

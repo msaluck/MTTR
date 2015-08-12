@@ -1,5 +1,6 @@
 package com.main.view.screen;
 
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -7,6 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 
 public class UploadDataPanel extends JPanel {
 
@@ -21,7 +23,7 @@ public class UploadDataPanel extends JPanel {
 		add(jfc);
 		
 		JPanel uploadPanel = new JPanel();
-		uploadPanel.setBounds(10, 120, 580, 30);
+		uploadPanel.setBounds(10, 120, 580, 40);
 		uploadPanel.setLayout(null);
 		add(uploadPanel);
 		
@@ -31,7 +33,7 @@ public class UploadDataPanel extends JPanel {
 		locationField.setColumns(10);
 		
 		JButton browseBtn = new JButton("Browse");
-		browseBtn.setBounds(479, 4, 91, 23);
+		browseBtn.setBounds(479, 4, 91, 30);
 		uploadPanel.add(browseBtn);
 		
 		browseBtn.addActionListener(new ActionListener() {
@@ -44,7 +46,25 @@ public class UploadDataPanel extends JPanel {
 		});
 		
 		JButton uploadBtn = new JButton("Upload");
-		uploadBtn.setBounds(200, 223, 91, 23);
+		uploadBtn.setBounds(200, 223, 91, 30);
 		add(uploadBtn);
+		
+		JButton backBtn = new JButton("Back");
+		backBtn.setBounds(525, 270, 75, 30);
+		backBtn.setFont(new Font("segou ui", Font.PLAIN, 16));
+		backBtn.setVerticalAlignment(SwingConstants.CENTER);
+		add(backBtn);
+		
+		backBtn.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				removeAll();
+				revalidate();
+				add(new HomeScreen());
+				repaint();
+				validate();
+			}
+		});
 	}
 }

@@ -50,6 +50,11 @@ public class ViewRawDataPanel extends JPanel {
 		goBtn.setFont(new Font("segou ui", Font.PLAIN, 16));
 		goBtn.setVerticalAlignment(SwingConstants.CENTER);
 		add(goBtn);
+		
+		JButton backBtn = new JButton("Back");
+		backBtn.setBounds(525, 270, 75, 30);
+		backBtn.setFont(new Font("segou ui", Font.PLAIN, 16));
+		backBtn.setVerticalAlignment(SwingConstants.CENTER);
+		add(backBtn);
 	}
-
 }
