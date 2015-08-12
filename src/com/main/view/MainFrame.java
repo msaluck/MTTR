@@ -7,7 +7,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import com.main.view.screen.HomeScreen;
 import com.main.view.screen.UploadDataPanel;
+import com.main.view.screen.ViewGraphicPanel;
+import com.main.view.screen.ViewRawDataPanel;
 
 public class MainFrame extends JFrame {
 
@@ -39,10 +42,9 @@ public class MainFrame extends JFrame {
 		setBounds(0, 0, 800, 600);
 		setLocationRelativeTo(null);
 		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
+		contentPane.setLayout(null);
 		setContentPane(contentPane);
-		add(new UploadDataPanel());
+		add(new HomeScreen());
 	}
 
 }

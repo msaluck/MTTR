@@ -1,5 +1,8 @@
 package com.main.view.screen;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JPanel;
@@ -14,13 +17,7 @@ public class UploadDataPanel extends JPanel {
 		setSize(600, 300);
 		setLayout(null);
 		
-		JFileChooser jfc = new JFileChooser();
-		
-		
-		int returnVal = jfc.showOpenDialog(UploadDataPanel.this);
-		
-		System.out.println(returnVal);
-		
+		final JFileChooser jfc = new JFileChooser();
 		add(jfc);
 		
 		JPanel uploadPanel = new JPanel();
@@ -36,6 +33,15 @@ public class UploadDataPanel extends JPanel {
 		JButton browseBtn = new JButton("Browse");
 		browseBtn.setBounds(479, 4, 91, 23);
 		uploadPanel.add(browseBtn);
+		
+		browseBtn.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				int returnVal = jfc.showOpenDialog(UploadDataPanel.this);
+				
+			}
+		});
 		
 		JButton uploadBtn = new JButton("Upload");
 		uploadBtn.setBounds(200, 223, 91, 23);
