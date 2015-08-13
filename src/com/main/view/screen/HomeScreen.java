@@ -12,10 +12,17 @@ import javax.swing.SwingConstants;
 public class HomeScreen extends JPanel{
 
 	private static final long serialVersionUID = -3307786826579055917L;
+	public JPanel workspacePanel;
+	public UploadDataPanel uploadDataPanel;
+	public ViewGraphicPanel viewGraphicPanel;
+	public ViewRawDataPanel viewRawDataPanel;
 	
 	public HomeScreen() {
 		setSize(800, 600);
 		setLayout(null);
+		uploadDataPanel = new UploadDataPanel();
+		viewGraphicPanel = new ViewGraphicPanel();
+		viewRawDataPanel = new ViewRawDataPanel();
 		
 		JLabel titleLbl = new JLabel("MTTR MONITORING SERPO");
 		titleLbl.setBounds(10, 10, 250, 50);
@@ -32,10 +39,8 @@ public class HomeScreen extends JPanel{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				removeAll();
-				add(new UploadDataPanel());
-				repaint();
-				revalidate();
+				workspacePanel.add(uploadDataPanel);
+				workspacePanel.repaint();
 			}
 		});
 		
@@ -48,11 +53,9 @@ public class HomeScreen extends JPanel{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ViewGraphicPanel viewGraphicPanel = new ViewGraphicPanel();
-				removeAll();
-				add(viewGraphicPanel);
-				repaint();
-				revalidate();
+				workspacePanel.add(viewGraphicPanel);
+				workspacePanel.repaint();
+				
 			}
 		});
 		
@@ -61,17 +64,29 @@ public class HomeScreen extends JPanel{
 		rawDataViewBtn.setFont(new Font("segui ui", Font.PLAIN, 16));
 		add(rawDataViewBtn);
 		
+		workspacePanel = new JPanel();
+		workspacePanel.setBounds(0, 70, 800, 300);
+		add(workspacePanel);
+		
+		JLabel versionLbl = new JLabel("ver 0.0.1");
+		versionLbl.setBounds(744, 575, 46, 14);
+		add(versionLbl);
+		
 		rawDataViewBtn.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ViewRawDataPanel viewRawDataPanel = new ViewRawDataPanel();
-				removeAll();
-				viewRawDataPanel.setBounds((getWidth() - viewRawDataPanel.getWidth())/2, (getHeight() - viewRawDataPanel.getHeight())/2, viewRawDataPanel.getWidth(), viewRawDataPanel.getHeight());
-				add(viewRawDataPanel);
-				repaint();
-				revalidate();
+				workspacePanel.add(viewRawDataPanel);
+				workspacePanel.repaint();
 			}
 		});
+	}
+	
+	protected void back() {
+		JPanel home = new JPanel();
+		home.setSize(800, 300);
+		home.setLayout(null);
+		workspacePanel.add(home);
+		repaint();
 	}
 }

@@ -4,7 +4,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 
-import com.main.view.screen.ContentPanel;
+import com.main.view.screen.HomeScreen;
 
 public class MainFrame extends JFrame {
 
@@ -34,7 +34,7 @@ public class MainFrame extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0, 0, 800, 600);
 		setLocationRelativeTo(null);
-		setContentPane(new ContentPanel());
+		setContentPane(new HomeScreen());
 	}
 
 }
