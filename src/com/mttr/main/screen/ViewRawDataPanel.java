@@ -15,7 +15,7 @@ public class ViewRawDataPanel extends JPanel {
 	private Font segouUI = new Font("segou ui", Font.PLAIN, 16);
 
 	public ViewRawDataPanel() {
-		setSize(800, 300);
+		setSize(600, 300);
 		setLayout(null);
 		
 		JLabel titlelbl = new JLabel("VIEW RAW DATA");
@@ -24,30 +24,30 @@ public class ViewRawDataPanel extends JPanel {
 		add(titlelbl);
 		
 		JLabel titleScreen = new JLabel("SELECT DATA");
-		titleScreen.setBounds(150, 30, 500, 50);
+		titleScreen.setBounds(225, 40, 150, 50);
 		titleScreen.setHorizontalAlignment(SwingConstants.CENTER);
 		titleScreen.setVerticalAlignment(SwingConstants.CENTER);
 		titleScreen.setFont(segouUI);
 		add(titleScreen);
 		
 		JDateChooser startDateChooser = new JDateChooser();
-		startDateChooser.setBounds(250, 100, 100, 35);
+		startDateChooser.setBounds(155, 100, 100, 35);
 		add(startDateChooser);
 		
 		JDateChooser endDateChooser = new JDateChooser();
-		endDateChooser.setBounds(450, 100, 100, 35);
+		endDateChooser.setBounds(345, 100, 100, 35);
 		add(endDateChooser);
 		
 		JLabel toLbl = new JLabel("to");
 		toLbl.setFont(segouUI);
-		toLbl.setBounds(375, 100, 50, 35);
+		toLbl.setBounds(275, 100, 50, 35);
 		toLbl.setVerticalAlignment(SwingConstants.CENTER);
 		toLbl.setHorizontalAlignment(SwingConstants.CENTER);
 		add(toLbl);
 		
 		JLabel selectRangeLbl = new JLabel("Select Range");
 		selectRangeLbl.setFont(new Font("segou ui", Font.PLAIN, 16));
-		selectRangeLbl.setBounds(130, 100, 100, 35);
+		selectRangeLbl.setBounds(10, 100, 100, 35);
 		selectRangeLbl.setVerticalAlignment(SwingConstants.CENTER);
 		add(selectRangeLbl);
 		

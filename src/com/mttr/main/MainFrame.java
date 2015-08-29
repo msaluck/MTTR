@@ -2,9 +2,11 @@ package com.main.view;
 
 import java.awt.EventQueue;
 
+import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
+import javax.swing.JInternalFrame;
 
-import com.main.view.screen.HomeScreen;
+import com.mttr.screen.HomeScreen;
 
 public class MainFrame extends JFrame {
 
@@ -34,7 +36,8 @@ public class MainFrame extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0, 0, 800, 600);
 		setLocationRelativeTo(null);
-		setContentPane(new HomeScreen());
+		HomeScreen homeScreen = new HomeScreen();
+		add(homeScreen);
 	}
 
 }
